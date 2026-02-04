@@ -43,4 +43,4 @@ jobs:
           agent_max_turns: "auto" # agent_max_turns must be one of: {"auto", 5, 10, 15, 20}
           agent_accuracy: "standard" # agent_accuracy must be one of: {"quick", "basic", "standard", "maximum"}
           agent_total_timeout: 3600 # agent_total_timeout must be a positive integer in seconds
-          collection_id: "7322e0a0-0d63-4bd1-a4ab-31a6ae99e429"
+          collection_id: "1198faf4-b589-472d-919a-00bd8bc60396"

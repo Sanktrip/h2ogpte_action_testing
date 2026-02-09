@@ -29,6 +29,10 @@ jobs:
       (github.event_name == 'pull_request_review_comment' && contains(github.event.comment.body, '@h2ogpte'))
 
     steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1       # only latest commit
+          sparse-checkout: "agents.md"
       - name: h2oGPTe Agent Assistant
         id: h2ogpte-agent-assistant
         uses: Sanktrip/h2ogpte-action@feat/guidelines-ingestion

@@ -33,6 +33,7 @@ jobs:
         with:
           fetch-depth: 1       # only latest commit
           sparse-checkout: "agents.md"
+          sparse-checkout-cone: true
       - name: h2oGPTe Agent Assistant
         id: h2ogpte-agent-assistant
         uses: Sanktrip/h2ogpte-action@feat/guidelines-ingestion

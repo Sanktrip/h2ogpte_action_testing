@@ -31,7 +31,7 @@ jobs:
     steps:
       - name: h2oGPTe Agent Assistant
         id: h2ogpte-agent-assistant
-        uses: Sanktrip/h2ogpte-action@feat/post-action-reporting
+        uses: Sanktrip/h2ogpte-action@feat/guidelines-ingestion
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           h2ogpte_api_key: ${{ secrets.H2OGPTE_API_KEY }}

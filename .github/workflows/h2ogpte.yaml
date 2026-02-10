@@ -49,3 +49,4 @@ jobs:
           agent_accuracy: "standard" # agent_accuracy must be one of: {"quick", "basic", "standard", "maximum"}
           agent_total_timeout: 3600 # agent_total_timeout must be a positive integer in seconds
           collection_id: "bd40cb33-c7b1-4f4a-9a85-d3162e4df757"
+          agent_docs: "agents.md"

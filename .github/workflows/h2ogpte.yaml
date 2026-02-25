@@ -29,14 +29,9 @@ jobs:
       (github.event_name == 'pull_request_review_comment' && contains(github.event.comment.body, '@h2ogpte'))
 
     steps:
-      - uses: actions/checkout@v6
-        with:
-          fetch-depth: 1       # only latest commit
-          sparse-checkout: "agents.md"
-          sparse-checkout-cone: true
       - name: h2oGPTe Agent Assistant
         id: h2ogpte-agent-assistant
-        uses: Sanktrip/h2ogpte-action@main
+        uses: Sanktrip/h2ogpte-action@task/prompt-tags
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           h2ogpte_api_key: ${{ secrets.H2OGPTE_API_KEY }}

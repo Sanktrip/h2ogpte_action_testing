@@ -31,7 +31,7 @@ jobs:
     steps:
       - name: h2oGPTe Agent Assistant
         id: h2ogpte-agent-assistant
-        uses: Sanktrip/h2ogpte-action@task/prompt-tags
+        uses: Sanktrip/h2ogpte-action@task/out-of-scope-prompt
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           h2ogpte_api_key: ${{ secrets.H2OGPTE_API_KEY }}
@@ -43,14 +43,6 @@ jobs:
           agent_max_turns: "auto" # agent_max_turns must be one of: {"auto", 5, 10, 15, 20}
           agent_accuracy: "standard" # agent_accuracy must be one of: {"quick", "basic", "standard", "maximum"}
           agent_total_timeout: 3600 # agent_total_timeout must be a positive integer in seconds
-          slash_commands: |
-            [
-              {
-                "name": "/review",
-                "prompt": "You are an expert code reviewer. Analyze the provided code for quality, bugs, security issues, and best practice violations. Provide specific, actionable feedback."
-              },
-              {
-                "name": "/explain",
-                "prompt": "You are a code explanation expert. Break down the provided code into clear, understandable terms. Explain what it does, how it works, and any notable patterns."
-              }
-            ]
+          github_mcp_allowed_tools: issue_read
+          github_mcp_allowed_toolsets: issues
+    
